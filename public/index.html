@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家族カレンダー</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <h1>家族カレンダー</h1>
+
+    <div id="calendar-header">
+        <button id="prev-month-btn">&lt;</button>
+        <h2 id="month-year-display"></h2>
+        <button id="next-month-btn">&gt;</button>
+        <button id="today-btn">今日</button>
+    </div>
+
+    <button id="enable-notifications-btn">通知を有効にする</button>
+
+    <div id="calendar"></div>
+
+    <div id="add-event-container">
+        <h2>イベントを追加</h2>
+        <form id="add-event-form">
+            <label for="event-date">日付:</label>
+            <input type="date" id="event-date" required>
+            <label for="event-time">時間 (オプション):</label>
+            <input type="time" id="event-time">
+            <label for="event-title">タイトル:</label>
+            <input type="text" id="event-title" required>
+            <label for="event-user">誰が？:</label>
+            <select id="event-user" required>
+                <option value="全員">全員</option>
+                <option value="はる">はる</option>
+                <option value="ゆい">ゆい</option>
+                <option value="ゆう">ゆう</option>
+                <option value="あつこ">あつこ</option>
+                <option value="こう">こう</option>
+            </select>
+            <button type="submit">追加</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
